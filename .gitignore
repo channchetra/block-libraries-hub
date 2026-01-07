@@ -1,0 +1,22 @@
+# WordPress Specific
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/
+wp-content/languages/
+
+# Plugin Specific
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+.env
+
+# GCP Specific (Avoid committing personal data if any leaks)
+includes/local-development.php
