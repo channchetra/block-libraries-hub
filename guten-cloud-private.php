@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Guten Cloud Private
+ * Plugin Name: KH Patterns
  * Plugin URI: https://www.facebook.com/groups/greenshiftwp
  * Description: Private cloud for Gutenberg patterns (Github, Google Drive, Local)
  * Version: 1.0.0
- * Author: Greenshift community, Keith
+ * Author: Chetra Chann
  * Author URI: https://www.facebook.com/groups/greenshiftwp
- * Text Domain: guten-cloud-private
+ * Text Domain: kh-patterns
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -26,7 +26,7 @@ require_once GCP_PATH . 'includes/class-gcp-source-local.php';
 require_once GCP_PATH . 'includes/class-gcp-source-github.php';
 require_once GCP_PATH . 'includes/class-gcp-source-gdrive.php';
 
-class Guten_Cloud_Private {
+class KH_Patterns {
     private static $instance = null;
 
     public static function get_instance() {
@@ -49,10 +49,10 @@ class Guten_Cloud_Private {
 
     public function add_admin_menu() {
         add_menu_page(
-            'Guten Cloud',
-            'Guten Cloud',
+            'KH Patterns',
+            'KH Patterns',
             'manage_options',
-            'guten-cloud-private',
+            'kh-patterns',
             array($this, 'render_admin_page'),
             'dashicons-cloud',
             100
@@ -64,7 +64,7 @@ class Guten_Cloud_Private {
     }
 
     public function enqueue_admin_assets($hook) {
-        if ('toplevel_page_guten-cloud-private' !== $hook) {
+        if ('toplevel_page_kh-patterns' !== $hook) {
             return;
         }
 
@@ -80,7 +80,7 @@ class Guten_Cloud_Private {
         );
 
         wp_localize_script('gcp-admin', 'gcpData', array(
-            'apiUrl' => esc_url_raw(rest_url('guten-cloud/v2')),
+            'apiUrl' => esc_url_raw(rest_url('kh-patterns/v2')),
             'nonce' => wp_create_nonce('wp_rest')
         ));
 
@@ -102,7 +102,7 @@ class Guten_Cloud_Private {
         );
 
         wp_localize_script('gcp-modal', 'gcpData', array(
-            'apiUrl' => esc_url_raw(rest_url('guten-cloud/v2')),
+            'apiUrl' => esc_url_raw(rest_url('kh-patterns/v2')),
             'nonce' => wp_create_nonce('wp_rest')
         ));
 
@@ -116,7 +116,7 @@ class Guten_Cloud_Private {
 }
 
 function GCP() {
-    return Guten_Cloud_Private::get_instance();
+    return KH_Patterns::get_instance();
 }
 
 GCP();

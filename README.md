@@ -1,6 +1,6 @@
-# Guten Cloud Private
+# KH Patterns
 
-Guten Cloud Private is a WordPress plugin that allows you to manage and sync Gutenberg patterns from private sources including GitHub, Google Drive, and your local hosting root. It provides a seamless experience for inserting cloud-based patterns directly into the Gutenberg editor.
+KH Patterns is a WordPress plugin that allows you to manage and sync Gutenberg patterns from private sources including GitHub, Google Drive, and your local hosting root. It provides a seamless experience for inserting cloud-based patterns directly into the Gutenberg editor.
 
 ## Features
 
@@ -13,7 +13,7 @@ Guten Cloud Private is a WordPress plugin that allows you to manage and sync Gut
 ## Setup Instructions
 
 ### 1. GitHub Integration
-- Go to **Guten Cloud** in your WordPress admin menu.
+- Go to **KH Patterns** in your WordPress admin menu.
 - In the **Github** tab, enter your **GitHub Personal Access Token**.
 - Provide the **Github Repository** (e.g., `username/repo`).
 - (Optional) Set the **Github Path** if your patterns are in a specific subfolder.
@@ -35,7 +35,7 @@ Guten Cloud Private is a WordPress plugin that allows you to manage and sync Gut
 ## How to Use
 
 1. Open any Post or Page in the Gutenberg Editor.
-2. Click the **Guten Cloud** button in the top toolbar.
+2. Click the **KH Patterns** button in the top toolbar.
 3. Select your preferred source (Github, Google Drive, or Hosting Root).
 4. Browse through the Tabs and Categories on the sidebar.
 5. Click on any pattern to see a live preview.

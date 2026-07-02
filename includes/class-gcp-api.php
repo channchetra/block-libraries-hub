@@ -6,37 +6,37 @@ class GCP_API {
     }
 
     public function register_routes() {
-        register_rest_route('guten-cloud/v2', '/settings', array(
+        register_rest_route('kh-patterns/v2', '/settings', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_settings'),
             'permission_callback' => array($this, 'check_permission'),
         ));
 
-        register_rest_route('guten-cloud/v2', '/settings', array(
+        register_rest_route('kh-patterns/v2', '/settings', array(
             'methods' => 'POST',
             'callback' => array($this, 'update_settings'),
             'permission_callback' => array($this, 'check_permission'),
         ));
 
-        register_rest_route('guten-cloud/v2', '/patterns', array(
+        register_rest_route('kh-patterns/v2', '/patterns', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_patterns'),
             'permission_callback' => array($this, 'check_permission'),
         ));
 
-        register_rest_route('guten-cloud/v2', '/pattern-content', array(
+        register_rest_route('kh-patterns/v2', '/pattern-content', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_pattern_content'),
             'permission_callback' => array($this, 'check_permission'),
         ));
 
-        register_rest_route('guten-cloud/v2', '/check-connection', array(
+        register_rest_route('kh-patterns/v2', '/check-connection', array(
             'methods' => 'POST',
             'callback' => array($this, 'check_connection'),
             'permission_callback' => array($this, 'check_permission'),
         ));
 
-        register_rest_route('guten-cloud/v2', '/create-directory', array(
+        register_rest_route('kh-patterns/v2', '/create-directory', array(
             'methods' => 'POST',
             'callback' => array($this, 'create_directory'),
             'permission_callback' => array($this, 'check_permission'),

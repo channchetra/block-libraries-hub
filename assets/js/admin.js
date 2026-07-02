@@ -3,7 +3,7 @@ const { createApp, ref, onMounted } = Vue;
 const App = {
     template: `
         <div class="gcp-admin-wrap">
-            <h1>Guten Cloud Private Settings</h1>
+            <h1>KH Patterns Settings</h1>
             
             <div class="gcp-settings-card">
                 <div class="gcp-tabs">

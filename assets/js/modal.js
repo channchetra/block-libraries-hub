@@ -22,7 +22,7 @@
             setIsFetching(true);
             try {
                 const data = await wp.apiFetch({ 
-                    path: `guten-cloud/v2/pattern-content?source=${pattern.source}&path=${encodeURIComponent(pattern.path)}` 
+                    path: `kh-patterns/v2/pattern-content?source=${pattern.source}&path=${encodeURIComponent(pattern.path)}` 
                 });
                 if (data.content) {
                     setBlocks(parse(data.content));
@@ -73,7 +73,7 @@
             setIsLoading(true);
             try {
                 const data = await wp.apiFetch({ 
-                    path: `guten-cloud/v2/patterns?source=${activeSource}` 
+                    path: `kh-patterns/v2/patterns?source=${activeSource}` 
                 });
                 const patternsData = Array.isArray(data) ? data : [];
                 setPatterns(patternsData);
@@ -123,7 +123,7 @@
                 let content = pattern.content;
                 if (!content) {
                     const data = await wp.apiFetch({ 
-                        path: `guten-cloud/v2/pattern-content?source=${pattern.source}&path=${encodeURIComponent(pattern.path)}` 
+                        path: `kh-patterns/v2/pattern-content?source=${pattern.source}&path=${encodeURIComponent(pattern.path)}` 
                     });
                     content = data.content;
                 }
@@ -210,13 +210,13 @@
         return createElement(Fragment, {},
             createElement(Button, {
                 icon: 'cloud',
-                label: 'Guten Cloud',
+                label: 'KH Patterns',
                 onClick: () => setIsOpen(true),
                 isPrimary: true,
                 className: 'gcp-trigger-button'
-            }, 'Guten Cloud'),
+            }, 'KH Patterns'),
             isOpen && createElement(Modal, {
-                title: 'Guten Cloud Patterns',
+                title: 'KH Patterns',
                 onRequestClose: () => setIsOpen(false),
                 isFullScreen: true,
                 className: 'gcp-pattern-modal'
